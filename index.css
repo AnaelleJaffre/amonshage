@@ -28,6 +28,7 @@ body {
     }
 
     & nav {
+        font-weight: bold;
         display: flex;
         place-content: center;
         
