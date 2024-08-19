@@ -1,0 +1,167 @@
+@font-face {
+    font-family: Geo;
+    src: url(polices/SciFly-Sans.ttf);
+
+}
+
+html {
+    scrollbar-width: none;
+}
+
+
+body {
+
+    font-family: Geo;
+    background-color: rgb(238, 241, 241);
+    color: rgb(53, 57, 61);
+    scrollbar-width: none;
+
+    & header {
+        display: flex;
+        place-content: center;
+        
+        & #title {
+            animation: slow_blow 10s;
+            width: 30vw;  
+        }
+
+    }
+
+    & nav {
+        display: flex;
+        place-content: center;
+        
+        & ul {
+            display: flex;
+            flex-direction: row;
+            padding: 0%;
+
+            & li {
+                padding: 2vh 4vw;
+                list-style-type:none;
+                font-size: large;
+                color: rgb(53, 57, 61);
+
+                &:hover {
+                    color: rgb(51, 92, 105);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    & main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 4vh 0;
+        
+        /* La gallerie d'artworks  */
+        & .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 70vw;
+            margin: 8vh 2vw;
+
+            /* Pour chaque artwork, individuellement */
+            & .artwork {
+                width: 20vw;
+                height: 20vw;
+                object-fit: cover;
+                margin: 2vh 1vw;
+                transition: 0.5s;
+                border-radius: 5px;
+            }
+
+            & .artwork:hover {
+                z-index: 100;
+                transform: rotateZ(5deg) scale(1.5);
+                filter: contrast(1.1);
+                box-shadow: 0 0 100px rgba(53, 62, 63, 0.552);
+                cursor: pointer;
+            }
+        }
+
+        /* Le modal prend toute la taille de l'écran et permet le défilement */
+        .modal {
+            display: none; /* Caché par défaut */
+            position: fixed; /* Reste en place */
+            z-index: 101; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto;
+            scrollbar-width: none;
+        }
+
+        /* Conteneur pour l'image dans le modal */
+        .modal-content {
+            width: 100%;
+            min-width: 50%;
+            margin: auto;
+            animation-name: zoom;
+            animation-duration: 0.8s;
+        }
+
+        /* Description fixe en bas de l'écran */
+        .caption {
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: #ffffff;
+            z-index: 102;
+        }
+
+        /* Bouton de fermeture fixe en haut à droite */
+        .close {
+            position: fixed;
+            top: 15px;
+            right: 35px;
+            color: white;
+            font-size: 50px;
+            z-index: 103;
+
+            &:hover {
+                transition: 0.4s;
+                text-shadow: 0 0 12px #ffffff;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    & a {
+        color: rgb(53, 57, 61);
+        text-decoration: none;
+    }
+
+    ::selection, ::-moz-selection {
+        background-color: rgba(212, 230, 246, 0.579);
+    }
+}
+
+
+
+@keyframes slow_blow {
+    0% {transform: scale(0.8);}
+    20% {transform: scale(0.9);}
+    100% {transform: scale(1);}
+}
+
+@keyframes zoom {
+    0% {transform:scale(0.4);}
+    100% {transform:scale(1);}
+  }
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .overlay-content {
+      width: 100%;
+    }
+}
