@@ -1,8 +1,6 @@
 
 // Constantes _____________________________________________________
 
-const gallery = document.querySelector(".gallery");
-
 const listImg = [
     
     {
@@ -80,11 +78,17 @@ const listImg = [
 ]
 
 
+// Navigation ________________________________________
 
-// Les éléments du menu sont cliquables. Par défaut, on voit l'accueil. Si on clique sur un onglet (2D, 3D...), alors ce dernier prend toute la largeur de la page et l'accueil disparaît.
+// Les éléments du menu sont cliquables. Si on clique sur un onglet (2D, About Me...), alors ce dernier prend toute la largeur de la page et l'affichage précédent.
 
-function onNavClick() {
+function onNavClick(sectionId) {
+    // Masquer les deux sections
+    document.getElementById('2D').style.display = 'none';
+    document.getElementById('about').style.display = 'none';
 
+    // Afficher la section sélectionnée
+    document.getElementById(sectionId).style.display = 'block';
 }
 
 
@@ -92,7 +96,7 @@ function onNavClick() {
 // Galerie __________________________________________
 
 function createGallery() {
-    let gallery = document.getElementById('2d'); // Assure-toi que l'ID est correct
+    let gallery = document.getElementById('gallery');
     
     listImg.forEach(element => {
         let artwork = document.createElement('img');
@@ -157,15 +161,3 @@ function showArtworkDetails(alt, src, title, date) {
 
 
 
-
-
-
-
-
-
-
-// function showArtworkDetails(artwork, alt, src, title, date) {
-
-//     artwork.requestFullscreen();
-
-// }

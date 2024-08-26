@@ -21,31 +21,55 @@
     
                 <nav>
                     <ul>
-                        <a href="#2d">
-                            <li>2D</li>
-                        </a>
-                        <li>3D</li>
-                        <li>About Me</li>
-                        <li>Contact</li>
+                        <!-- Même si les redirections sont gérées en JS et qu'on aurait pu les mettre aux <li>, on garde un bouton, cliquable, pour l'accessibilité. -->
+                            <li><button onclick="onNavClick('2D')">2D</button></li>
+                            <li><button onclick="onNavClick('about')">About Me</button></li>
                     </ul>
                 </nav>
     
                 <main>
-                    
-                    <p>Here are some of my 2D artworks :)</p>
-                    <p>Click to show it full-screen!</p>
-                    <p><b>PS:</b> I sign differently according to the years, because I changed my artist name 3 times... 🫠</p>
 
-                    <div id="2d" class="gallery"></div>
-
-                    <!-- "The Modal" - en gros c'est l'image en plein écran -->
-                    <div id="theModal" class="modal"></div>
-                                       
+                    <div id="2D">
+                        <p>Here are some of my 2D artworks :)</p>
+                        <p>Click to show it full-screen!</p>
+                        <p><b>PS:</b> I sign differently according to the years, because I changed my artist name 3 times... 🫠</p>
     
+                        <div id="gallery"></div>
+    
+                        <!-- "The Modal" - en gros c'est l'image en plein écran -->
+                        <div id="theModal" class="modal"></div>
+                    </div>
+
+                    <div id="about" style="display: none;">
+                        <p>My name is Anaelle, and I currently am a student at the ENSC, a cognitive engineering school.</p>
+                    </div>
+                                       
                 </main>
                 
                 <footer>
-                    
+                    <div>
+                        <a><p>Website map</p></a>
+                        <a><p>Legal mentions</p></a>
+                    </div>
+                    <div>
+                        <p>If you're reading this, you may be awesome in a certain sense.</p>
+                    </div>
+                    <div>
+                        <h3>Contact</h3>
+                        <div>
+                            <p>osany.art@gmail.com</p>
+                        </div>
+
+                        <div>
+                            <img src="">
+                            <a href="almonds_shortage" target="_blank"><p>Instagram - Amonshage</p></a>
+                        </div>
+                        
+                        <div>
+                            <img src="">
+                            <p>Artstation - Amonshage</p>
+                        </div>
+                    </div>
                 </footer>
 
             </div>

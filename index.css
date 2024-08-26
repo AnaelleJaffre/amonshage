@@ -28,7 +28,6 @@ body {
     }
 
     & nav {
-        font-weight: bold;
         display: flex;
         place-content: center;
         
@@ -36,16 +35,22 @@ body {
             display: flex;
             flex-direction: row;
             padding: 0%;
-
+            
             & li {
                 padding: 2vh 4vw;
                 list-style-type:none;
-                font-size: large;
-                color: rgb(53, 57, 61);
+                
+                & button {
+                    font-family: Geo;
+                    font-size: large;
+                    font-weight: bold;
+                    color: rgb(53, 57, 61);
+                    border: none;
 
-                &:hover {
-                    color: rgb(51, 92, 105);
-                    cursor: pointer;
+                    &:hover {
+                        color: rgb(51, 92, 105);
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -59,7 +64,7 @@ body {
         margin: 4vh 0;
         
         /* La gallerie d'artworks  */
-        & .gallery {
+        & #gallery {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -125,11 +130,12 @@ body {
             right: 35px;
             color: white;
             font-size: 50px;
+            text-shadow: 0 0 10px #ffffff;
             z-index: 103;
 
             &:hover {
                 transition: 0.4s;
-                text-shadow: 0 0 12px #ffffff;
+                text-shadow: 0 0 12px #ffffff, 0 0 24px #ffffff, 0 0 20px #ffffff;
                 cursor: pointer;
             }
         }
