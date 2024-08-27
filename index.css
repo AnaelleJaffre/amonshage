@@ -1,8 +1,17 @@
+/* Variables */
+:root {
+    --footer-color: rgb(192, 204, 206);
+}
+
+/* Polices */
+
 @font-face {
     font-family: Geo;
     src: url(polices/SciFly-Sans.ttf);
 
 }
+
+/* Le reste */
 
 html {
     scrollbar-width: none;
@@ -17,6 +26,14 @@ body {
     scrollbar-width: none;
     padding: 0px;
     margin: 0px;
+
+    /* L'image de fond */
+    & #background {
+        z-index: -1000;
+        width: 100%;
+        position: fixed;
+        animation: wipe-enter 1s 1;
+    }
 
     & header {
         display: flex;
@@ -83,7 +100,6 @@ body {
 
             & .artwork:hover {
                 z-index: 100;
-                transform: rotateZ(5deg) scale(1.5);
                 filter: contrast(1.1);
                 box-shadow: 0 0 100px rgba(53, 62, 63, 0.552);
                 cursor: pointer;
@@ -143,42 +159,68 @@ body {
     }
 
     & footer {
-        background-color: rgb(192, 204, 206);
-        display: flex;
-        justify-content: center;
-        padding: 2vw;
+        background-color: var(--footer-color);
         margin-top: 10vh;
-        align-items: center;
-
-        & div {
+        
+        /* Le footer est divisé en deux div, l'une au-dessus de l'autre. */
+        & >div {
+            padding: 2vw;
+            display: flex;
             justify-content: center;
-            text-align: center;
-            width: 20vw;
-            padding: 0 4vw;
-        }
+            align-items: center;
+            background: linear-gradient(to top, transparent, var(--footer-color)), url(images/2021_cloudy-sky-background.jpg);
+            background-size: 100%;
+            background-position: 0% 12%;
 
-        & #contact {
-
+            /* Dans la première div, on a les trois parties côte-à-côte. */
             & div {
+                justify-content: center;
+                width: 20vw;
+                padding: 0 4vw;
+                text-align: center;
                 display: flex;
-                flex-direction: row;
-                align-items: center;
+                flex-direction: column;
 
-                & p {
-                    margin: 1vw;
+                & div {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    text-align: center;
+                    padding: 0%;
                 }
             }
-
-            & img {
-                width: 20px;
-                margin: 0 5px;
-            }
         }
+
+        /* La seconde div du footer contient les copyrights. */
+        #copyrights {
+            padding: 0;
+            color: white;
+            background: rgb(94, 99, 158);
+            font-size: 12px;
+        }
+
     }
 
-    & a {
+    .icon {
+        width: 20px;
+        margin: 0 5px;
+    }
+
+    .citation {
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        color: #831eff;
+    }
+
+    a {
         color: rgb(53, 57, 61);
         text-decoration: none;
+        transition: 0.1s ease-in-out;
+    }
+    
+    a:hover {
+        transform: scale(1.1);
+        text-shadow: -2px 1px 1px rgba(255, 72, 108, 0.8), 1px -1px 1px rgba(0, 255, 255, 0.6);
     }
 
     ::selection {

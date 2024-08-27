@@ -105,6 +105,17 @@ function createGallery() {
         artwork.className = "artwork";
         artwork.style.cursor = 'pointer';
 
+        // Au survol, l'artwork tourne d'un angle aléatoire entre -10 et 10°
+        artwork.addEventListener('mouseover', function() {
+            const randomDegree = Math.random()*16 - 8; // Math.random() donne un truc entre 0 et 1
+            this.style.transform = `rotateZ(${randomDegree}deg) scale(1.4)`;
+        });
+    
+        // Réinitialiser la transformation quand la souris quitte l'artwork (sinon ça reste en plein milieu comme ça bruhh)
+        artwork.addEventListener('mouseout', function() {
+            this.style.transform = 'none';
+        });
+
         // Ajouter un événement de clic à chaque image
         artwork.addEventListener("click", function() {
             showArtworkDetails(element.alt, element.src, element.title, element.date);
