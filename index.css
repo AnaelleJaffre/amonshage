@@ -28,11 +28,26 @@ body {
     margin: 0px;
 
     /* L'image de fond */
-    & #background {
-        z-index: -1000;
+    & .background {
         width: 100%;
+        z-index: -1000;
         position: fixed;
-        animation: wipe-enter 1s 1;
+    }
+
+    & #background-1 {
+        animation: background-zoom-1 17s infinite;
+        animation-delay: 2s;
+    }
+    
+    & #background-2 {
+        animation: background-zoom-2 15s infinite;
+        animation-delay: 1s;
+        filter: opacity(0.5);
+    }
+
+    & #background-3 {
+        animation: background-zoom-3 11s infinite;
+        filter: blur(1px);
     }
 
     & header {
@@ -160,7 +175,10 @@ body {
 
     & footer {
         background-color: var(--footer-color);
-        margin-top: 10vh;
+        padding: 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;        
         
         /* Le footer est divisé en deux div, l'une au-dessus de l'autre. */
         & >div {
@@ -220,12 +238,14 @@ body {
     
     a:hover {
         transform: scale(1.1);
-        text-shadow: -2px 1px 1px rgba(255, 72, 108, 0.8), 1px -1px 1px rgba(0, 255, 255, 0.6);
+        transition: ease-in-out 0.2s;
     }
 
     ::selection {
-        background-color: rgba(238, 219, 219, 0.315);
-        text-shadow: 1px 1px 1px rgba(255, 0, 0, 0.4), -1px -1px 1px rgba(0, 255, 255, 0.4);
+        background-color: #831eff0a;
+        filter: blur(2px);
+        color: rgb(255, 255, 255);
+        text-shadow: 1px 1px 1px rgb(255, 0, 0), -1px -1px 1px rgb(0, 255, 255);
     }
     
     ::-moz-selection {
@@ -245,8 +265,29 @@ body {
 @keyframes zoom {
     0% {transform:scale(0.4);}
     100% {transform:scale(1);}
-  }
+}
 
+@keyframes background-zoom-1 {
+    0% {transform: scale(1) translateX(0px);}
+    20% {transform: scale(1.1) translateX(40px);}
+    90%{filter: blur(1px);}
+    100% {transform: scale(1) translateX(0px);}
+}
+
+@keyframes background-zoom-2 {
+    0% {transform: scale(1) translateX(0px);}
+    10%{filter: blur(1px);}
+    20% {transform: scale(1.1) translateX(-100px);}
+    30%{filter: blur(0px);}
+    100% {transform: scale(1) translateX(0px);}
+}
+
+@keyframes background-zoom-3 {
+    0% {transform: scale(1) translateX(0px);}
+    20% {transform: scale(1.1) translateZ(60px);}
+    40% {filter: brightness(2);}
+    100% {transform: scale(1) translateX(0px);}
+}
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
