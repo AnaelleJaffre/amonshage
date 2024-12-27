@@ -7,7 +7,37 @@ const listImg = [
         title: "SecureFlow Initiative - Logo and Background",
         alt: "Logo of SecureFlow Initiative, a shield, on a black background with white fluttering waves.",
         date: 2024
-    },    
+    },
+    {
+        src: "images/2024_des-embruns.jpg",
+        title: "Des Embruns",
+        alt: "Personne assise dans une sorte de feuille, au milieu de perles de grenades. Atmosphère très chaude.",
+        date: 2024
+    },
+    {
+        src: "images/2024_moon-s-war.jpg",
+        title: "Moon's War",
+        alt: "Jeune fille blonde en robe bleue et rouge, avec des manches très ample, très longues. Autour d'elle, des drapeaux rouges qui s'animent au vent. La scène prend place la nuit, avec la Lune et les étoiles en fond.",
+        date: 2024
+    },
+    {
+        src: "images/2024_conte-de-fees.jpg",
+        title: "Fééries",
+        alt: "Young lady with red hair, flying on a flower.",
+        date: 2024
+    },
+    {
+        src: "images/2022_play-down.jpg",
+        title: "Play Down",
+        alt: "Someone with purple hair, crossing a river at night, in a boat, with varied coloured lights.",
+        date: 2022
+    },
+    {
+        src: "images/2024_roses-are-clouds-sky-is-red.jpg",
+        title: "Roses are Clouds, Sky is Red",
+        alt: "Youg person with light pink hair, floating in a pink sky.",
+        date: 2024
+    },
     {
         src: "images/2023_finally-dom.jpg",
         title: "Dom",
@@ -21,10 +51,16 @@ const listImg = [
         date: 2024
     },
     {
-        src: "images/2024_conte-de-fees.jpg",
-        title: "Fééries",
-        alt: "Young lady with red hair, flying on a flower.",
+        src: "images/2024_voyageur-intrepide.jpg",
+        title: "Voyageur Intrépide",
+        alt: "Young boy hanging up a map, trying to figure out where to go. He's in front of the beauch, it's sunny.",
         date: 2024
+    },
+    {
+        src: "images/2022_eniroi.jpg",
+        title: "High by the waves",
+        alt: "Young boy with blue hair and red pants. Fishes are dead at his feet, and a wave of his height is coming to crash in his back.",
+        date: 2022
     },
     {
         src: "images/2023_ummu-s-DTIYS.jpg",
@@ -45,9 +81,21 @@ const listImg = [
         date: 2024
     },
     {
-        src: "images/2023_helio.jpg",
+        src: "images/2022_helio.jpg",
         title: "Helio",
+        alt: "Young, calm and wise-like blond boy, sitting cross-legged, floating into a blue sky with clouds. He is wearing white and decorated clothes, whith a long red ribbon.",
+        date: 2023
+    },
+    {
+        src: "images/2023_helio.jpg",
+        title: "Helio - 2nd Version",
         alt: "Young, calm and wise-like blond boy, floating into a blue sky with clouds. He is wearing white and decorated clothes.",
+        date: 2023
+    },
+    {
+        src: "images/2023_CA.jpg",
+        title: "C.A.",
+        alt: "Young lady whith pale purple hair and clear blue eyes, in an asiatic restaurant.",
         date: 2023
     },
     {
