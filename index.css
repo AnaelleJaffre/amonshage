@@ -74,6 +74,21 @@ body {
         filter: blur(1px);
     }
 
+    /* La flèche de retour en arrière */
+    #return-back {
+        position: fixed;
+        top: 10vh;
+        left: 10vw;
+        width: 5vw;
+        min-width: 50px;
+        transition: 0.1s ease-in-out;
+
+        &:hover {
+            filter: brightness(1.2);
+            transform: scale(1.1);
+        }
+    }
+
     /* Header */
     & header {
         display: flex;
@@ -135,6 +150,7 @@ body {
             background-color: rgba(238, 241, 241, 0.7);
             /* backdrop-filter: blur(3px) brightness(1.03); */
             border-radius: 20px;
+
         }
         
         section {
