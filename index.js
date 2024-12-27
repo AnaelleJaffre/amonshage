@@ -210,9 +210,6 @@ function showArtworkDetails(alt, src, title, date) {
         this.style.objectFit = 'contain';
         this.style.objectPosition = 'center top';
     };
-    
-
-
 
     modal.appendChild(modalImg);
 
@@ -235,7 +232,7 @@ function showArtworkDetails(alt, src, title, date) {
     closeButton.className = 'close';
     closeButton.innerHTML = '&times;';
     closeButton.onclick = function () {
-        modal.style.display = 'none';
+        closeModal();
     };
 
     modal.appendChild(closeButton);
@@ -244,6 +241,16 @@ function showArtworkDetails(alt, src, title, date) {
     modal.style.display = 'block';
 }
 
+// Et si on préfère appuyer sur Echap pour fermer l'image
+function closeModal() {
+    var modal = document.getElementById("theModal");
+    modal.style.display = 'none';
+}
 
-
+// On ajoute écouteur d'événement pour la touche Échap
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') { // Vérifie si la touche appuyée est Échap
+        closeModal(); // Ferme le modal
+    }
+});
 
