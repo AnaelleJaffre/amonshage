@@ -232,7 +232,7 @@ function showArtworkDetails(alt, src, title, date) {
     closeButton.className = 'close';
     closeButton.innerHTML = '&times;';
     closeButton.onclick = function () {
-        closeModal();
+        modal.style.display = 'none';
     };
 
     modal.appendChild(closeButton);
