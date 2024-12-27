@@ -2,7 +2,12 @@
 // Constantes _____________________________________________________
 
 const listImg = [
-    
+    {
+        src: "images/2024_fond_secureflow_initiative.jpg",
+        title: "SecureFlow Initiative - Logo and Background",
+        alt: "Logo of SecureFlow Initiative, a shield, on a black background with white fluttering waves.",
+        date: 2024
+    },    
     {
         src: "images/2023_finally-dom.jpg",
         title: "Dom",
@@ -68,13 +73,7 @@ const listImg = [
         title: "Starr0x's DTIYS (Instagram)",
         alt: "Manga girl all in purple, with long purple hair.",
         date: 2021
-    },
-    {
-        src: "images/2021_demforner-chall.jpg",
-        title: "Drawing of a friend's old OC (Demforner on Instagram, not sure if her account still exists)",
-        alt: "Young lady with pale skin and long white hair, wearing a black coat. She seems tired of what she sees.",
-        date: 2021
-    }
+    }    
 ]
 
 
@@ -128,6 +127,7 @@ function createGallery() {
 createGallery();
 
 function showArtworkDetails(alt, src, title, date) {
+
     // Récupérer le modal
     var modal = document.getElementById("theModal");
 
@@ -140,35 +140,62 @@ function showArtworkDetails(alt, src, title, date) {
     modalImg.id = 'img01';
     modalImg.src = src;
     modalImg.alt = alt;
+
+    // Vérifie les proportions de l'image pour ajuster le style
+    modalImg.onload = function () {
+        const imgRatio = this.naturalWidth / this.naturalHeight;
+        const screenRatio = window.innerWidth / window.innerHeight;
+    
+        if (imgRatio > screenRatio) {
+            // Si l'image est plus large que l'écran
+            this.style.width = 'auto';
+            this.style.height = '100%';
+        } else {
+            // Si l'image est plus haute que l'écran
+            this.style.width = '100%';
+            this.style.height = 'auto';
+        }
+    
+        // Supprime les contraintes de redimensionnement
+        this.style.maxWidth = 'none';
+        this.style.maxHeight = 'none';
+        this.style.objectFit = 'contain';
+        this.style.objectPosition = 'center top';
+    };
+    
+
+
+
     modal.appendChild(modalImg);
 
     // Création de la description
     var captionText = document.createElement('div');
     captionText.className = 'caption';
-    
+
     var artworkTitle = document.createElement('h3');
     artworkTitle.innerHTML = title;
     var artworkDate = document.createElement('p');
     artworkDate.innerHTML = date;
-    
+
     captionText.appendChild(artworkTitle);
     captionText.appendChild(artworkDate);
-    
+
     modal.appendChild(captionText);
 
     // Création du bouton de fermeture
     var closeButton = document.createElement('span');
     closeButton.className = 'close';
     closeButton.innerHTML = '&times;';
-    closeButton.onclick = function() {
+    closeButton.onclick = function () {
         modal.style.display = 'none';
     };
-    
+
     modal.appendChild(closeButton);
 
     // Afficher le modal
     modal.style.display = 'block';
 }
+
 
 
 
