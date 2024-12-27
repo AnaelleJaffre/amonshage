@@ -4,7 +4,6 @@
 }
 
 /* Polices */
-
 @font-face {
     font-family: Geo;
     src: url(polices/SciFly-Sans.ttf);
@@ -12,7 +11,6 @@
 }
 
 /* Le reste */
-
 html {
     scrollbar-width: none;
 }
@@ -28,7 +26,32 @@ body {
     padding: 0px;
     margin: 0px;
 
-    /* L'image de fond */
+    .code-style {
+        font-family: 'Courier New', Courier, monospace;
+        color: rgb(97, 96, 96);
+    }
+
+    /* Listes */
+    ol, ul {
+        margin: 0 12vw;
+        padding-inline-start: 0;
+        list-style-position: inside;
+        
+        li {
+            padding: 1vh 1vw;
+        }
+    }
+
+    ul {
+        list-style-type: "🍋‍🟩";
+    }
+
+    ol > li::marker {
+        font-weight: bold;
+        color: #688fa1;
+    }
+
+    /* Les images de fond, animées */
     & .background {
         width: 100%;
         z-index: -1000;
@@ -51,6 +74,7 @@ body {
         filter: blur(1px);
     }
 
+    /* Header */
     & header {
         display: flex;
         place-content: center;
@@ -63,6 +87,7 @@ body {
 
     }
 
+    /* Menu */
     & nav {
         display: flex;
         place-content: center;
@@ -92,16 +117,23 @@ body {
         }
     }
 
+    /* Contenu principal */
     & main {
         display: flex;
         flex-direction: column;
         text-align: center;
         margin: 0 14vw;
 
+        a {
+            font-weight: bold;
+            color: #831eff;
+        }
+
         .whiteBg {
             padding: 5vh 0;
-            margin-bottom: 10vh;
-            background-color: rgba(255, 255, 255, 0.5);
+            margin: 5vh 0;
+            background-color: rgba(238, 241, 241, 0.4);
+            backdrop-filter: blur(3px) brightness(1.03);
             border-radius: 20px;
         }
         
@@ -194,13 +226,14 @@ body {
 
     }
 
-
+    /* Pied-de-page */
     & footer {
         background-color: var(--footer-color);
         padding: 0;
         position: relative;
         bottom: 0;
-        width: 100%;        
+        width: 100%;   
+        margin-top: 5vh;     
         
         /* Le footer est divisé en deux div, l'une au-dessus de l'autre. */
         & >div {
