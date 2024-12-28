@@ -207,8 +207,6 @@ function showArtworkDetails(alt, src, title, date) {
         // Supprime les contraintes de redimensionnement
         this.style.maxWidth = 'none';
         this.style.maxHeight = 'none';
-        this.style.objectFit = 'contain';
-        this.style.objectPosition = 'center top';
     };
 
     modal.appendChild(modalImg);
