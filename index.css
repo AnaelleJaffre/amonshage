@@ -33,7 +33,6 @@ body {
 
     /* Listes */
     ol, ul {
-        margin: 0 12vw;
         padding-inline-start: 0;
         list-style-position: inside;
         
@@ -133,7 +132,7 @@ body {
     }
 
     /* Contenu principal */
-    & main {
+    main {
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -142,22 +141,14 @@ body {
         a {
             font-weight: bold;
             color: #831eff;
-        }
-
-        .whiteBg {
-            padding: 5vh 0;
-            margin: 5vh 0;
-            background-color: rgba(238, 241, 241, 0.7);
-            /* backdrop-filter: blur(3px) brightness(1.03); */
-            border-radius: 20px;
-
-        }
-        
-        section {
-            p {
-                margin: 2vh 10vw;
+            text-decoration: none;
+            transition: 0.1s ease-in-out;
+            
+            &:hover { /* Ne fonctionne pas... */
+                transform: scale(1.1);
             }
         }
+        
         
         /* La gallerie d'artworks  */
         & #gallery {
@@ -249,11 +240,9 @@ body {
         position: relative;
         bottom: 0;
         width: 100%;   
-        margin-top: 5vh;     
         
         /* Le footer est divisé en deux div, l'une au-dessus de l'autre. */
-        & >div {
-            padding: 2vw;
+        & > div {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -264,7 +253,6 @@ body {
             /* Dans la première div, on a les trois parties côte-à-côte. */
             & div {
                 justify-content: center;
-                width: 20vw;
                 padding: 0 4vw;
                 text-align: center;
                 display: flex;
@@ -287,31 +275,30 @@ body {
             background: rgb(94, 99, 158);
             font-size: 12px;
         }
-
+        
+    
+        a {
+            color: rgb(53, 57, 61);
+            text-decoration: none;
+            transition: 0.1s ease-in-out;
+        }
+        
+        a:hover {
+            transform: scale(1.1);
+        }
     }
 
     .icon {
         width: 20px;
         margin: 0 5px;
     }
-
+    
     .citation {
         font-family: 'Times New Roman', Times, serif;
         font-style: italic;
         color: #831eff;
     }
-
-    a {
-        color: rgb(53, 57, 61);
-        text-decoration: none;
-        transition: 0.1s ease-in-out;
-    }
     
-    a:hover {
-        transform: scale(1.1);
-        transition: ease-in-out 0.2s;
-    }
-
     ::selection {
         background-color: #831eff0a;
         filter: blur(2px);
@@ -324,6 +311,8 @@ body {
         text-shadow: 1px 1px 1px rgba(255, 0, 0, 0.4), -1px -1px 1px rgba(0, 255, 255, 0.4);
     }
 }
+
+
 
 
 @keyframes slow_blow {
@@ -359,9 +348,69 @@ body {
     100% {transform: scale(1) translateX(0px);}
 }
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .overlay-content {
-      width: 100%;
+@media (min-width: 640px) {
+    
+    .whiteBg {
+        padding: 2vh 0 6vh 0;
+        margin: 5vh 0;          
+        background-color: rgba(238, 241, 241, 0.7);
+        /* backdrop-filter: blur(3px) brightness(1.03); */
+        border-radius: 20px;
+    }
+    
+    section {
+        p {
+            margin: 2vh 10vw;
+        }
+    }
+    
+    ul, ol {
+        margin: 0 12vw;
+    }
+
+    footer {
+        margin-top: 5vh;     
+        
+        > div {
+            padding: 2vw;
+
+            > div {
+                width: 20vw;
+            }
+        }
+    }
+}
+
+@media (max-device-width: 640px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .whiteBg {
+        margin-top: 2vh;
+        margin-bottom: 5vh;
+    }
+
+    .p {
+        margin: 0%;
+    }
+
+    ul, ol {
+        margin: 0;
+    }
+
+    footer {
+        margin-top: 0%;
+        font-size: 12px;
+        
+        > div {
+            padding: 0%;
+        }
+
+        #copyrights {
+            height: 100px;
+            align-items: start;
+        }
     }
 }
