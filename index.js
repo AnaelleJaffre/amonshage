@@ -3,6 +3,48 @@
 
 const listImg = [
     {
+        src: "images/12.09.26.jpg",
+        title: "Harvest Time",
+        alt: "Small woman in a short white dress jumping over wheat stalks with a mischievous look, holding an enormous scythe.",
+        date: 2026
+    },
+    {
+        src: "images/11.08.26.jpg",
+        title: "Strange Dreams",
+        alt: "Man in a white shirt with long black hair turning white, perched high on a golden metal structure, watching a young girl with long blonde hair holding a musical instrument. Red curtains on the left, blue on the right, clear sky background, strange green-skinned demons in the corner.",
+        date: 2026
+    },
+    {
+        src: "images/meria.png",
+        title: "Meria",
+        alt: "Nun in a midnight blue robe holding a lily-of-the-valley scepter, accompanied by small ghosts.",
+        date: 2026
+    },
+    {
+        src: "images/24.12.25.png",
+        title: "Offrande",
+        alt: "Pretty fairy in a pink dress, sitting on a leaf in a wheat field, offering pearls to a small furry ball resembling a bee.",
+        date: 2025
+    },
+    {
+        src: "images/26.10.25.png",
+        title: "Scyzenord",
+        alt: "Human in red armor, with red wings ending in feathers, amid a mass of gray clouds that blur occasionally, with a few star flecks. Blue scarves trailing off.",
+        date: 2025
+    },
+    {
+        src: "images/15.09.25.png",
+        title: "Passenger",
+        alt: "Young man with blond hair sailing on a rowboat, on a calm and clear sea, under the sun, caught by the wind.",
+        date: 2025
+    },
+    {
+        src: "images/23.03.25.png",
+        title: "Oni's Master",
+        alt: "Woman with black hair, diving with a scepter into a mass of clouds drawn in a Buddhist style.",
+        date: 2025
+    },
+    {
         src: "images/2024_fond_secureflow_initiative.jpg",
         title: "SecureFlow Initiative - Logo and Background",
         alt: "Logo of SecureFlow Initiative, a shield, on a black background with white fluttering waves.",
@@ -11,13 +53,13 @@ const listImg = [
     {
         src: "images/2024_des-embruns.jpg",
         title: "Des Embruns",
-        alt: "Personne assise dans une sorte de feuille, au milieu de perles de grenades. Atmosphère très chaude.",
+        alt: "Person sitting in a kind of leaf, amid pomegranate seeds. Very warm atmosphere.",
         date: 2024
     },
     {
         src: "images/2024_moon-s-war.jpg",
         title: "Moon's War",
-        alt: "Jeune fille blonde en robe bleue et rouge, avec des manches très ample, très longues. Autour d'elle, des drapeaux rouges qui s'animent au vent. La scène prend place la nuit, avec la Lune et les étoiles en fond.",
+        alt: "Young blonde girl in a blue and red dress, with very wide, very long sleeves. Around her, red flags animate in the wind. The scene takes place at night, with the Moon and stars in the background.",
         date: 2024
     },
     {
@@ -25,24 +67,6 @@ const listImg = [
         title: "Fééries",
         alt: "Young lady with red hair, flying on a flower.",
         date: 2024
-    },
-    {
-        src: "images/2022_play-down.jpg",
-        title: "Play Down",
-        alt: "Someone with purple hair, crossing a river at night, in a boat, with varied coloured lights.",
-        date: 2022
-    },
-    {
-        src: "images/2024_roses-are-clouds-sky-is-red.jpg",
-        title: "Roses are Clouds, Sky is Red",
-        alt: "Youg person with light pink hair, floating in a pink sky.",
-        date: 2024
-    },
-    {
-        src: "images/2023_finally-dom.jpg",
-        title: "Dom",
-        alt: "Young lady in the water with a dress.",
-        date: 2023
     },
     {
         src: "images/11.07.24.jpg",
@@ -53,25 +77,7 @@ const listImg = [
     {
         src: "images/2024_voyageur-intrepide.jpg",
         title: "Voyageur Intrépide",
-        alt: "Young boy hanging up a map, trying to figure out where to go. He's in front of the beauch, it's sunny.",
-        date: 2024
-    },
-    {
-        src: "images/2022_eniroi.jpg",
-        title: "High by the waves",
-        alt: "Young boy with blue hair and red pants. Fishes are dead at his feet, and a wave of his height is coming to crash in his back.",
-        date: 2022
-    },
-    {
-        src: "images/2023_ummu-s-DTIYS.jpg",
-        title: "Dark Angel",
-        alt: "Black man with dark-blue wings,surrounded by dark-blue birds.",
-        date: 2023
-    },
-    {
-        src: "images/2024_edna-yuki.jpg",
-        title: "Edna Yuki",
-        alt: "Young blond manga ladyn flying in the sky, handling a spectrum, with white ribbons in the hair.",
+        alt: "Young boy hanging up a map, trying to figure out where to go. He's in front of the beach, it's sunny.",
         date: 2024
     },
     {
@@ -81,28 +87,34 @@ const listImg = [
         date: 2024
     },
     {
+        src: "images/2023_finally-dom.jpg",
+        title: "Dom",
+        alt: "Young lady in the water with a dress.",
+        date: 2023
+    },
+    {
+        src: "images/2023_ummu-s-DTIYS.jpg",
+        title: "Dark Angel",
+        alt: "Black man with dark-blue wings, surrounded by dark-blue birds.",
+        date: 2023
+    },
+    {
         src: "images/2022_helio.jpg",
         title: "Helio",
-        alt: "Young, calm and wise-like blond boy, sitting cross-legged, floating into a blue sky with clouds. He is wearing white and decorated clothes, whith a long red ribbon.",
+        alt: "Young, calm and wise-like blond boy, sitting cross-legged, floating into a blue sky with clouds. He is wearing white and decorated clothes, with a long red ribbon.",
         date: 2023
     },
     {
-        src: "images/2023_helio.jpg",
-        title: "Helio - 2nd Version",
-        alt: "Young, calm and wise-like blond boy, floating into a blue sky with clouds. He is wearing white and decorated clothes.",
-        date: 2023
+        src: "images/2022_eniroi.jpg",
+        title: "High by the waves",
+        alt: "Young boy with blue hair and red pants. Fishes are dead at his feet, and a wave of his height is coming to crash behind him.",
+        date: 2022
     },
     {
-        src: "images/2023_CA.jpg",
-        title: "C.A.",
-        alt: "Young lady whith pale purple hair and clear blue eyes, in an asiatic restaurant.",
-        date: 2023
-    },
-    {
-        src: "images/poulpie.jpg",
-        title: "Poulpie",
-        alt: "Young lady with mate skin, an orange and red hat, sat in a hammock, over a large white place with water, with bamboo around.",
-        date: 2024
+        src: "images/2022_play-down.jpg",
+        title: "Play Down",
+        alt: "Someone with purple hair, crossing a river at night, in a boat, with varied coloured lights.",
+        date: 2022
     },
     {
         src: "images/2021_cloudy-sky-background.jpg",
@@ -113,7 +125,7 @@ const listImg = [
     {
         src: "images/2021_that-s-up-to-u.jpg",
         title: "That's up to u",
-        alt: "Young lady with sweet pink hair, sat in the air, looking down, with a green sweater.",
+        alt: "Young lady with sweet pink hair, sitting in the air, looking down, with a green sweater.",
         date: 2021
     },
     {
@@ -147,6 +159,7 @@ function createGallery() {
     
     listImg.forEach(element => {
         let artwork = document.createElement('img');
+        artwork.loading = "lazy";
         artwork.alt = element.alt;
         artwork.src = element.src;
         artwork.className = "artwork";
